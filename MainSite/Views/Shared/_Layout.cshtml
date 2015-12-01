@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/css")
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader-bg">
+        <div id="preloader"></div>
+    </div>
+
+    <header>
+        <div class="container">
+
+            <!-- BEGIN NAVIGATION -->
+            <nav class="navbar custom-nav" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">john. miller.</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="custom-nav">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="selected" href="index.html">Home</a></li>
+                        <li><a href="works.html">Works</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li class="dropdown custom-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other +</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog-single.html">Single article</a></li>
+                                <li><a href="works-single.html">Single work</a></li>
+                                <li><a href="components.html">Components</a></li>
+                                <li><a href="pricing-tables.html">Pricing tables</a></li>
+                                <li><a href="404.html">404 page</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+
+        <!-- BEGIN Home Slider -->
+        <div id="home-slider">
+            <ul id="slides">
+                <!-- Slide 1. -->
+                <li>
+                    <div class="bg-image bg1"></div>
+                    <div class="overlay color-1"></div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-8 col-md-6">
+                                <h1>Creative Designer</h1>
+                                <p>You can change background images and overlay colours in the slider. It is a really easy task to do. You will find this explained in template documentation.</p>
+                                <a href="works.html" class="btn btn-custom yellow">Check the Portfolio</a>
+                                <a href="#" class="btn btn-custom empty about-me">About Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Slide 2. -->
+                <li>
+                    <div class="bg-image bg2"></div>
+                    <div class="overlay color-2"></div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-8 col-md-6">
+                                <h1>Front End Developer</h1>
+                                <p>Aliquam viverra enim urna, sit amet feugiat urna cursus eu. Voel placerat diam pellentesque nec. Nam nunc sem, viverra id justo in, scelerisque dignissim nisl.</p>
+                                <a href="components.html" class="btn btn-custom yellow">Bootstrap 3</a>
+                                <a href="pricing-tables.html" class="btn btn-custom empty">Check Prices</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Slide 3. -->
+                <li>
+                    <div class="bg-image bg3"></div>
+                    <div class="overlay color-3"></div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-8 col-md-6">
+                                <h1>Passionate Blogger</h1>
+                                <p>Fusce ullamcorper convallis elit et dictum. Donec porttitor mi elit, dignissim tempus mi interdum ac. Aliquam erat volutpat. Nulla egt rhoncus tortor, eget sodales nunc.</p>
+                                <a href="contact.html" class="btn btn-custom filled yellow">Send Me an Email</a>
+                                <a href="blog.html" class="btn btn-custom empty">Read the Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="btn-slider">
+                <li><a data-id="1" href="#" class="active-slide"></a></li>
+                <li><a data-id="2" href="#"></a></li>
+                <li><a data-id="3" href="#"></a></li>
+            </ul>
+
+            <img class="me img-responsive" src="images/me.png" alt="me" />
+        </div>
+        <!-- END Home Slider -->
+
+        <!-- Begin Slogan -->
+        <div class="container">
+            <span class="slogan">nice<span class="yellow">&amp;</span>easy<span class="transparent">solutions</span></span>
+        </div>
+    </header>
+    <!-- /////////////////////////////////////////////////////////////////////////////// -->
+
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("scripts", required: false)
+
+    <!-- /////////////////////////////////////////////////////////////////////////////// -->
+    <footer>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 footer-share">
+                <p>Show some love...</p>
+
+                <!-- Facebook Like button -->
+
+                <!-- 
+                        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fenvato.com&amp;width=140&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:140px; height:21px;" allowTransparency="true"></iframe>
+                        -->
+
+                <!-- Twitter Share button -->
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="nemos_">Tweet</a>
+            </div>
+
+            <div class="col-sm-6 col-xs-12 footer-info">
+                <p>Profit Group | Copyright В© 2015.</p>
+                <p class="to-top">Back to Top<a href="#">&nbsp;</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Twitter Share button JS -->
+    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+    <!-- /SCRIPTS + JQUERY -->
+
+</body>
+</html>

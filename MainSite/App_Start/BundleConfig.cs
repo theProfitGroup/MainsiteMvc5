@@ -20,7 +20,7 @@ namespace MainSite.App_Start
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(                                
-                "~/Content/css/bootstrap.min.css",
+                "~/Content/css/bootstrap.css",
                 "~/Content/css/style.css",
                 "~/Content/css/flexslider.css"
                 ));

@@ -2,6 +2,72 @@
     ViewBag.Title = "Prof IT Group";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@section BobyHeader
+{
+        <!-- BEGIN Home Slider -->
+<div id="home-slider">
+    <ul id="slides">
+        <!-- Slide 1. -->
+        <li>
+            <div class="bg-image bg1"></div>
+            <div class="overlay color-1"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-6">
+                        <h1>Creative Designer</h1>
+                        <p>You can change background images and overlay colours in the slider. It is a really easy task to do. You will find this explained in template documentation.</p>
+                        <a href="works.html" class="btn btn-custom yellow">Check the Portfolio</a>
+                        <a href="#" class="btn btn-custom empty about-me">About Me</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!-- Slide 2. -->
+        <li>
+            <div class="bg-image bg2"></div>
+            <div class="overlay color-2"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-6">
+                        <h1>Front End Developer</h1>
+                        <p>Aliquam viverra enim urna, sit amet feugiat urna cursus eu. Voel placerat diam pellentesque nec. Nam nunc sem, viverra id justo in, scelerisque dignissim nisl.</p>
+                        <a href="components.html" class="btn btn-custom yellow">Bootstrap 3</a>
+                        <a href="pricing-tables.html" class="btn btn-custom empty">Check Prices</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!-- Slide 3. -->
+        <li>
+            <div class="bg-image bg3"></div>
+            <div class="overlay color-3"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-6">
+                        <h1>Passionate Blogger</h1>
+                        <p>Fusce ullamcorper convallis elit et dictum. Donec porttitor mi elit, dignissim tempus mi interdum ac. Aliquam erat volutpat. Nulla egt rhoncus tortor, eget sodales nunc.</p>
+                        <a href="contact.html" class="btn btn-custom filled yellow">Send Me an Email</a>
+                        <a href="blog.html" class="btn btn-custom empty">Read the Blog</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="btn-slider">
+        <li><a data-id="1" href="#" class="active-slide"></a></li>
+        <li><a data-id="2" href="#"></a></li>
+        <li><a data-id="3" href="#"></a></li>
+    </ul>
+    <img class="me img-responsive" src=@Url.Content("~/Content/images/me.png") alt="me" />
+</div>
+<!-- END Home Slider -->
+<!-- Begin Slogan -->
+<div class="container">
+    <span class="slogan">nice<span class="yellow">&amp;</span>easy<span class="transparent">solutions</span></span>
+</div>
+}
+
 	<!-- BEGIN MAIN CONTENT -->
 <div class="container boxed">
 

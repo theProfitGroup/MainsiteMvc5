@@ -1,4 +1,5 @@
-﻿@{
+﻿@using System.Web.UI.HtmlControls
+@{
     ViewBag.Title = "Portfolio";
     Layout = "~/Views/Shared/_Layout.cshtml";       
 }
@@ -11,8 +12,8 @@
 }
 
 <div class="row">
-    <h2 class="col-md-8 col-md-offset-2">Good work requires hard work.</h2>
-    <p class="col-md-6 col-md-offset-3 text-center">Some of my latest. Have a question? Just <a href="contact.html">send</a> a message.</p>
+    <h2 class="col-md-8 col-md-offset-2">Our portfolio.</h2>
+    <p class="col-md-6 col-md-offset-3 text-center">Have a question? Just @Html.ActionLink("send", "Contact", "Home") a message.</p>
 </div>
 
 <!-- BEGIN WORKS -->
@@ -21,11 +22,11 @@
         <!-- Item 1 -->
         <div class="col-lg-4 col-sm-6 col-xs-12">
             <div class="work-item">
-                <img src=@Url.Content("~/Content/images/works/thumbs/1.jpg") alt="" />
+                <img style="width: 320px; height: 210px;" src=@Url.Content("~/Content/images/works/thumbs/lovemyguide.png") alt="" />
                 <div class="item-info">
                     <div>
-                        <h4>Simply Nota Dark Identity</h4>
-                        <p>Donec at nulla quam. Duis, libero a vehic ula pulvinar, est enim laoreet lectus libero a vehicula.</p>
+                        <h4>LoveMyGuide</h4>
+                        <p>Present and guide your audience through the favorite places and organize your recommendations into a personal city guide.</p>
                         <ul class="item-options">
                             <li><a class="enlarge" data-toggle="modal" href="#modal1"></a></li>
                             <li><a class="view slower" href="works-single.html"></a></li>

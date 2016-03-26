@@ -10,7 +10,7 @@ namespace MainSite.Controllers
 
         public ActionResult Index()
         {
-            return View("Blog");
+            return View("~/Views/Home/Blog.cshtml");
         }
 
         public ActionResult Detail()

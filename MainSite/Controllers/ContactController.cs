@@ -9,7 +9,7 @@ namespace MainSite.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View("~/Views/Home/Contact.cshtml");
         }
     }
 }

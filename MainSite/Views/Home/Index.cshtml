@@ -1,4 +1,5 @@
-﻿@{
+﻿@using MainSite.Core
+@{
     ViewBag.Title = "Welcome";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -85,18 +86,29 @@
 
     <div class="row">
         <div class="col-md-6">
-            <h3>The short story about me</h3>
-            <p>Lorem ipsum nulla per pharetra habitant eget senectus amet, augue rutrum ac id libero amet felis massa euismod, congue diam egestas faucibus venenatis. Lorem ipsum nulla per pharetra habitant eget senectus amet, augue rutrum ac id libero amet felis massa euismod, congue diam egestas faucibus venenatis.</p>
-            <p>Lorem ipsum nulla per pharetra habitant eget senectus amet, augue rutrum ac id libero amet felis massa euismod, congue diam egestas faucibus venenatis.</p>
+            <h3>Who we are</h3>
+            <p> 
+                With excellent experience in .NET and optimistic vision of the future <b>@SiteSettings.CompanyName</b> software development company help you to resolve complex challenges in the programming world.
+            </p>
+            <p>Our goal is provide eficient way of solving complex problems. We're looking partners whose professionalism, involvement in the work, honesty are business requirements.</p>
         </div>
         <div class="col-md-6">
-            <h3>What can I do for You</h3>
+            <h3>Area of expertise</h3>
+            <p>                
+                Create project from scratch based on best practices.<br />                
+                Refactoring existing systems. <br />
+                Performance optimization based on stress tests.<br />
+                Planning and management.<br />
+                Analyze potential security risks.
+            </p>
+            @*            
             <ul class="services list-unstyled">
-                <li class="service1">Latest technologies nulla per pharetra habitant eget senectus amet, augue rutrum ac id.</li>
-                <li class="service2">Responsive design per pharetra habitant eget senectus amet, augue rutrum ac id habitant eget senectus.</li>
-                <li class="service3">Innovation and new for nulla per pharetra habitant eget senectus amet, augue rutrum ac id per pharetra habitant eget senectus .</li>
-                <li class="service4">Creativite works for nulla per pharetra habitant eget senectus amet, augue rutrum ac id.</li>
-            </ul>
+                <li class="service1">Create project from scratch based on best practices.</li>
+                <li class="service2">Refactoring existing systems.</li>
+                <li class="service2">Performance optimization based on stress tests.</li>
+                <li class="service3">Planning and management.</li>
+                <li class="service4">Analyze potential security risks.</li>
+            </ul>*@
         </div>
     </div>
 

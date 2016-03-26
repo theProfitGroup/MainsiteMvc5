@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace MainSite.Controllers
 {
@@ -14,14 +10,16 @@ namespace MainSite.Controllers
         public ActionResult Index()
         {
             //return View();
-            return RedirectToAction("404");
+            return RedirectToAction("NotFound");
         }
-
 
         public ActionResult NotFound()
         {
+            Response.StatusCode = 404;
+            Response.Status = "404 HTTP";
+            Response.StatusDescription = "Requested page does not exist";
+
             return View();
         }
-
     }
 }

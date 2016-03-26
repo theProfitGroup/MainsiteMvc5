@@ -8,11 +8,12 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace MainSite
+using System.Web.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+
+namespace MainSite.App_Start
 {
-    using System.Web.Http;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Serialization;
     /// <summary>
     /// Application settings class.
     /// </summary>

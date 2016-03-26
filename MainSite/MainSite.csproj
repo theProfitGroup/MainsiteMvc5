@@ -139,6 +139,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WorksController.cs" />
     <Compile Include="Core\BaseController.cs" />
+    <Compile Include="Core\SiteSettings.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -209,15 +210,6 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="html\404.html" />
-    <Content Include="html\blog-single.html" />
-    <Content Include="html\blog.html" />
-    <Content Include="html\components.html" />
-    <Content Include="html\contact.html" />
-    <Content Include="html\index.html" />
-    <Content Include="html\pricing-tables.html" />
-    <Content Include="html\works-single.html" />
-    <Content Include="html\works.html" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\default.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -249,19 +241,28 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Partial\SocialNetworkPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Partial\FooterPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Blog.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Works.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Contact.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Partial\TwitterSharePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Blog\Detail.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Works\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Contact\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Error\NotFound.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

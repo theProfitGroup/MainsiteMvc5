@@ -1,14 +1,17 @@
-﻿<!DOCTYPE html>
+﻿@using MainSite.Core
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title</title>
-
+    <title>@ViewBag.Title</title>        
+        
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>    
     @Styles.Render("~/Content/css")
     @*@Scripts.Render("~/bundles/modernizr")*@
     
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>   
 </head>
 <body>
 
@@ -30,23 +33,20 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">john. miller.</a>
+                    <a class="navbar-brand" href="#">@SiteSettings.CompanyName</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="custom-nav">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            @Html.ActionLink("Home","Index","Home")
-                        @*<a class="selected" href="index.html">Home</a>*@
+                            @Html.ActionLink("home","Index","Home")
                         </li>
                         <li>
-                        @*<a href="works.html">Works</a>*@
-                            @Html.ActionLink("Works", "Index", "Works")
+                            @Html.ActionLink("works", "Works", "Home")
                         </li>
                         <li>
-                        @*<a href="blog.html">Blog</a>*@
-                            @Html.ActionLink("Blog", "Index", "Blog")
+                            @Html.ActionLink("blog", "Blog", "Home")
                         </li>
                         <li class="dropdown custom-dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other +</a>
@@ -56,14 +56,12 @@
                                 <li><a href="components.html">Components</a></li>
                                 <li><a href="pricing-tables.html">Pricing tables</a></li>
                                 <li>
-                                    @*<a href="404.html">404 page</a>*@
                                     @Html.ActionLink("404 page", "NotFound", "Error")
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            @*<a href="contact.html">Contact</a>*@
-                            @Html.ActionLink("Contact", "Index", "Contact")
+                            @Html.ActionLink("contact", "Contact", "Home")
                         </li>
                     </ul>
                 </div>
@@ -71,41 +69,28 @@
             </nav>
         </div>
 
-        @RenderSection("BobyHeader", required: false)
+        @RenderSection("BodyHeader", required: false)
     </header>
     <!-- /////////////////////////////////////////////////////////////////////////////// -->
+    
+    
+    <!-- BEGIN MAIN CONTENT -->
+    <div class="container boxed">
 
-    @RenderBody()
+        @RenderBody()
+        
+        @{Html.RenderPartial("Partial/SocialNetworkPartial");}  
+        @{Html.RenderPartial("Partial/FooterPartial");}
+    
+    </div>
+    <!-- END MAIN CONTENT -->
 
-    @Scripts.Render("~/bundles/js")
+    @*@Scripts.Render("~/bundles/js")*@
     @RenderSection("scripts", required: false)
-
+           
     <!-- /////////////////////////////////////////////////////////////////////////////// -->
-    <footer>
-        <div class="row">
-            <div class="col-sm-6 col-xs-12 footer-share">
-                <p>Show some love...</p>
 
-                <!-- Facebook Like button -->
-
-                <!-- 
-                        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fenvato.com&amp;width=140&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:140px; height:21px;" allowTransparency="true"></iframe>
-                        -->
-
-                <!-- Twitter Share button -->
-                <a href="https://twitter.com/share" class="twitter-share-button" data-via="nemos_">Tweet</a>
-            </div>
-
-            <div class="col-sm-6 col-xs-12 footer-info">
-                <p>Profit Group | Copyright В© 2015.</p>
-                <p class="to-top">Back to Top<a href="#">&nbsp;</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Twitter Share button JS -->
-    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
-    <!-- /SCRIPTS + JQUERY -->
+    @{Html.RenderPartial("Partial/TwitterSharePartial");}
 
 </body>
 </html>

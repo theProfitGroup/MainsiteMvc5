@@ -1,13 +1,15 @@
 /* Google Maps Settings */
 /*----------------------------------------------------------------*/
-function google_map(){
-	var map_position = new google.maps.LatLng(-37.8135, 144.97);
-    var marker_position = new google.maps.LatLng(-37.8135, 144.97);
-    var map;
+function google_map() {
+    var latitude = 49.4331206;
+    var longitude = 26.994610599999987;
+    var map_position = new google.maps.LatLng(latitude, longitude);
+    var marker_position = new google.maps.LatLng(latitude, longitude);
+    var map;    
     var marker;
 
     var mapOptions = {
-        zoom: 13,
+        zoom: 18,
         scrollwheel: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         streetViewControl: true,

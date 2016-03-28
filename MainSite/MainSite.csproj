@@ -113,7 +113,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\WorksController.cs" />
+    <Compile Include="Controllers\ProjectsController.cs" />
     <Compile Include="Core\BaseController.cs" />
     <Compile Include="Core\SiteSettings.cs" />
     <Compile Include="Global.asax.cs">
@@ -233,7 +233,7 @@
     <Content Include="Views\Home\Blog.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Works.cshtml" />
+    <Content Include="Views\Home\Projects.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Contact.cshtml" />

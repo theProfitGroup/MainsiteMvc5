@@ -15,7 +15,7 @@ namespace MainSite.Controllers
             return View();
         }
 
-        public ActionResult Works()
+        public ActionResult Projects()
         {
             return View();
         }

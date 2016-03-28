@@ -23,11 +23,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-md-6">
-                        <h1>Creative Designer</h1>
-                        <p>You can change background images and overlay colours in the slider. It is a really easy task to do. You will find this explained in template documentation.</p>
-                        @*<a href="works.html" class="btn btn-custom yellow">Check the Portfolio</a>*@
-                        @Html.ActionLink("Check the Portfolio", "Works", "Home", null, new { @class = "btn btn-custom yellow" })                        
-                        <a href="#" class="btn btn-custom empty about-me">About Me</a>
+                        <h1>Full Software Development Cycle</h1>
+                        <p>
+                            Full software development cycle is the process that guarantees the best quality of built and working software. 
+                        </p>
+                        @*@Html.ActionLink("Check the Portfolio", "Works", "Home", null, new { @class = "btn btn-custom yellow" })                        
+                        <a href="#" class="btn btn-custom empty about-me">About Me</a>*@
                     </div>
                 </div>
             </div>
@@ -39,8 +40,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-md-6">
-                        <h1>Front End Developer</h1>
-                        <p>Aliquam viverra enim urna, sit amet feugiat urna cursus eu. Voel placerat diam pellentesque nec. Nam nunc sem, viverra id justo in, scelerisque dignissim nisl.</p>
+                        <h1>Back End Develompent</h1>
+                        <p>We call back end code the brain of any app out there. 
+                        The back end development is a part of the application that is never visible to the user. 
+                        It is built with use of server-side language and database. </p>
                         <a href="components.html" class="btn btn-custom yellow">Bootstrap 3</a>
                         <a href="pricing-tables.html" class="btn btn-custom empty">Check Prices</a>
                     </div>
@@ -54,21 +57,38 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-md-6">
-                        <h1>Passionate Blogger</h1>
-                        <p>Fusce ullamcorper convallis elit et dictum. Donec porttitor mi elit, dignissim tempus mi interdum ac. Aliquam erat volutpat. Nulla egt rhoncus tortor, eget sodales nunc.</p>
+                        <h1>Front End Development</h1>
+                        <p>We provide more than just a lavish front end design. 
+                        We also build everything with an intuitive architecture that guides the user through the flow of actions you want them to follow. </p>
                         <a href="contact.html" class="btn btn-custom filled yellow">Send Me an Email</a>
                         <a href="blog.html" class="btn btn-custom empty">Read the Blog</a>
                     </div>
                 </div>
             </div>
         </li>
+        <!-- Slide 4. -->
+        @*<li>
+            <div class="bg-image bg3"></div>
+            <div class="overlay color-3"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-6">
+                        <h1>User Experience</h1>
+                        <p>An efficient user interface covers the gap between the human brain and the digital product you offer. 
+                        Based on the behavioral patterns and in compliance with the Human Interface Guidelines we create delightful user experience – simple, intuitive and efficient.</p>
+                        <a href="contact.html" class="btn btn-custom filled yellow">Send Me an Email</a>
+                        <a href="blog.html" class="btn btn-custom empty">Read the Blog</a>
+                    </div>
+                </div>
+            </div>
+        </li>*@
     </ul>
     <ul class="btn-slider">
         <li><a data-id="1" href="#" class="active-slide"></a></li>
         <li><a data-id="2" href="#"></a></li>
         <li><a data-id="3" href="#"></a></li>
     </ul>
-    <img class="me img-responsive" src=@Url.Content("~/Content/images/me.png") alt="me" />
+    @*<img class="me img-responsive" src=@Url.Content("~/Content/images/me.png") alt="me" />*@
 </div>
     <!-- END Home Slider -->
 
@@ -95,8 +115,8 @@
     <div class="col-md-4">
         <h3>Area of expertise</h3>
         <p>                
-            Create project from scratch based on best practices.<br />                
-            Refactoring existing systems. <br />
+            Create projects from scratch based on best practices.<br />                
+            Improving existing systems. <br />
             Performance optimization based on stress tests.<br />
             Planning and management.<br />
             Analyze potential security risks.
@@ -253,7 +273,7 @@
     </div>
     <!-- END Portfolio Recent Items -->
 
-    <hr />
+@*    <hr />
 
     <!-- BEGIN Testimonials -->
     <div class="row">
@@ -291,14 +311,13 @@
     <!-- END Testimonials -->
 
     <hr class="top" />
-
-    <!-- BEGIN Client Logos -->
+<!-- BEGIN Client Logos -->
     <div class="row">
         <div class="col-md-12">
             <img class="client-logos scale-it img-responsive" src=@Url.Content("~/Content/images/client-logos.png") alt="" />
         </div>
     </div>
-    <!-- END Client Logos -->
+    <!-- END Client Logos -->*@
 
     <hr class="bottom" />
 

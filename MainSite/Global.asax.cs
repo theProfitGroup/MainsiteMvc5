@@ -27,7 +27,7 @@ namespace MainSite
 
         void Application_Error(object sender, EventArgs e)
         {
-            Server.Transfer("~/Pages/Errors/Error.aspx");
+            //Server.Transfer("~/Pages/Errors/Error.aspx");
         }
 
         void Session_Start(object sender, EventArgs e)

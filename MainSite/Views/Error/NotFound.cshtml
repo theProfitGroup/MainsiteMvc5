@@ -3,26 +3,28 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!-- BEGIN MAIN CONTENT -->
-<div class="container boxed">
+@section scripts
+{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/default.js")"></script>
+}
 
-    <!-- BEGIN 404 -->
-    <div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="page-404 text-center">
-                    <p>404</p>
-                    <h3>Four oh four... I am sorry.</h3>
-                    <small>
-                        Sorry, the page you're looking for doesn't exists.<br />
-                        Go back to @Html.ActionLink("Home","Index", "Home") or @Html.ActionLink("Contact","Contact", "Home") to report about the problem.
-                    </small>
-                </div>
+<!-- BEGIN 404 -->
+<div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="page-404 text-center">
+                <p>404</p>
+                <h3>Four oh four... I am sorry.</h3>
+                <small>
+                    Sorry, the page you're looking for doesn't exists.<br />
+                    Go back to @Html.ActionLink("Home", "Index", "Home") or @Html.ActionLink("Contact", "Contact", "Home") to report about the problem.
+                </small>
             </div>
         </div>
     </div>
-    <!-- END 404 -->
-
-    <hr class="bottom" />
-
 </div>
+<!-- END 404 -->
+
+<hr class="bottom" />
+
+

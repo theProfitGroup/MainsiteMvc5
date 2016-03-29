@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 
 namespace MainSite.Controllers
 {
@@ -13,7 +14,7 @@ namespace MainSite.Controllers
             return RedirectToAction("NotFound");
         }
 
-        public ActionResult NotFound()
+        public ActionResult NotFound(Exception error)
         {
             Response.StatusCode = 404;
             Response.Status = "404 HTTP";

@@ -12,21 +12,15 @@ namespace MainSite.App_Start
             routes.IgnoreRoute("{resource}.ico/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Home",
-                url: "{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
-
-            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(
-                name: "error404",
-                url: "{controller}/{action}",
-                defaults: new { controller = "Error", action = "NotFound" }
+              name: "Home",
+                url: "{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

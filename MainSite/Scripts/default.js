@@ -383,14 +383,14 @@ jQuery(function() {
 		if(validateForm(1,1,1,email_field)){
 			jQuery.ajax({
 			type: "POST",
-			url: "php/send_mail.php",
+			url: "contact",
 			data: dataString,
 			success: function() {
 				jQuery('#contact').fadeOut('slow', function(){
                     jQuery(this).html('<div id="confirm-message"></div>');
 
                     jQuery('#confirm-message').html('<h4>Your message has been sent successfully</h4>')
-				    	.append('<p>We will be in touch with you very soon... Best Regards!</p>');
+				    	.append('<p>We will contact with your ASAP... Thanks!</p>');
                     
                     jQuery(this).fadeIn('slow');
                 })

@@ -10,8 +10,8 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.flexslider.js")"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-    
-    <script type="text/javascript" src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>    
+
+    <script type="text/javascript" src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/default.js")"></script>
 }
 
@@ -29,14 +29,22 @@
 
         <h3>Contact us</h3>
         <p>
-            Have an existing software system but it's working too slow? <br/>
-            Looking how automate own businness? <br/>
-            Have security leaks in your projects? <br/>            
+            Have an existing software system but it's working too slow? <br />
+            Looking how automate own businness? <br />
+            Have security leaks in your projects? <br />
             Please write us and we'll contact with you ASAP.
         </p>
 
+        @if (ViewBag.Send != null)
+        {
+            ViewBag.Send = null;
+            <h3>Thanks! We will review your request.</h3>
+        }
+
+
         <!-- Begin Contact Form -->
-        <form id="contact" action="#">
+        @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @id = "contact" }))
+        {
             <div class="row">
                 <div class="form-group col-sm-6">
                     <input type="text" class="form-control" id="name" placeholder="Your name">
@@ -45,13 +53,14 @@
                     <input type="email" class="form-control" id="email" placeholder="Email">
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <textarea class="form-control" id="message" placeholder="Message"></textarea>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <textarea class="form-control" id="message" placeholder="Message"></textarea>
+                    </div>
                 </div>
-            </div>
-            <button type="submit" class="btn btn-custom no-margin yellow">Submit Message</button>
-        </form>
+                    <button type="submit" class="btn btn-custom no-margin yellow">Submit Message</button>
+        }
+
         <!-- End Contact Form -->
     </div>
 
@@ -69,7 +78,7 @@
             <address>
                 <strong>Phone</strong><br>
                 <abbr title="Phone">P:</abbr>
-                +38 (098) 043-43-22                    
+                +38 (098) 043-43-22
             </address>
 
             <address class="no-margin">
@@ -88,21 +97,21 @@
 <hr class="bottom" />
 
 <div class="row full-width">
-        <div class="subscribe-container">
-            <img class="parallax-bg" src=@Url.Content("~/Content/images/subscribe-bg.jpg") alt="" />
+    <div class="subscribe-container">
+        <img class="parallax-bg" src=@Url.Content("~/Content/images/subscribe-bg.jpg") alt="" />
 
-            <div class="row">
-                <p class="col-md-8 col-md-offset-2">Stay tuned!</p>
-            </div>
+        <div class="row">
+            <p class="col-md-8 col-md-offset-2">Stay tuned!</p>
+        </div>
 
-            <div class="row">
-                <!-- Begin Subscribe Form -->
-                <form id="subscribe" class="col-md-8 col-md-offset-2" action="#" method="post">
-                    <input type="text" name="subscribe-email" value="" id="subscribe-email" placeholder="Email address" />
-                    <input class="btn-custom yellow" type="submit" name="submit" value="Subscribe Now" />
-                </form><!-- End Subscribe Form -->
-            </div>
+        <div class="row">
+            <!-- Begin Subscribe Form -->
+            <form id="subscribe" class="col-md-8 col-md-offset-2" action="#" method="post">
+                <input type="text" name="subscribe-email" value="" id="subscribe-email" placeholder="Email address" />
+                <input class="btn-custom yellow" type="submit" name="submit" value="Subscribe Now" />
+            </form><!-- End Subscribe Form -->
         </div>
     </div>
+</div>
 
 

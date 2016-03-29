@@ -24,5 +24,12 @@ namespace MainSite.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Contact(string name, string email, string message)
+        {
+            ViewBag.Send = true;
+            return View();
+        }
     }
 }

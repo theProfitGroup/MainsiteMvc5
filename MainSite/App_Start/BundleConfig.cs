@@ -10,7 +10,7 @@ namespace MainSite.App_Start
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
                         "~/Scripts/jquery-{version}.js",                        
                         "~/Scripts/jquery.easing.1.3.js",
-                        "~/Scripts/jquery.flexslider.js",
+                        //"~/Scripts/jquery.flexslider.js",
                         "~/Scripts/bootstrap.js",
                         "~/Scripts/default.js"
                         ));
@@ -21,8 +21,8 @@ namespace MainSite.App_Start
 
             bundles.Add(new StyleBundle("~/bundles/css").Include(                                
                 "~/Content/css/bootstrap.css",
-                "~/Content/css/style.css",
-                "~/Content/css/flexslider.css"
+                "~/Content/css/style.css"
+                //"~/Content/css/flexslider.css"
                 ));
             
             BundleTable.EnableOptimizations = false;

@@ -7,6 +7,8 @@ namespace MainSite.App_Start
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
+            BundleTable.EnableOptimizations = false;
+
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
                         "~/Scripts/jquery-{version}.js",                        
                         "~/Scripts/jquery.easing.1.3.js",
@@ -19,13 +21,12 @@ namespace MainSite.App_Start
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/bundles/css").Include(                                
+            bundles.Add(new StyleBundle("~/styles").Include(                                
                 "~/Content/css/bootstrap.css",
                 "~/Content/css/style.css"
                 //"~/Content/css/flexslider.css"
                 ));
-            
-            BundleTable.EnableOptimizations = false;
+                       
         }
     }
 }

@@ -8,10 +8,10 @@ namespace MainSite.App_Start
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
-                        "~/Scripts/jquery-1.10.2.min.js",
+                        "~/Scripts/jquery-{version}.js",                        
                         "~/Scripts/jquery.easing.1.3.js",
                         "~/Scripts/jquery.flexslider.js",
-                        "~/Scripts/bootstrap.min.js",
+                        "~/Scripts/bootstrap.js",
                         "~/Scripts/default.js"
                         ));
 
@@ -19,11 +19,13 @@ namespace MainSite.App_Start
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(                                
+            bundles.Add(new StyleBundle("~/bundles/css").Include(                                
                 "~/Content/css/bootstrap.css",
                 "~/Content/css/style.css",
                 "~/Content/css/flexslider.css"
                 ));
+            
+            BundleTable.EnableOptimizations = false;
         }
     }
 }

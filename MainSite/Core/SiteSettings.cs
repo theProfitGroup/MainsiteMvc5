@@ -1,10 +1,11 @@
 ﻿// /* Copyright (C) Pro.Vision - All Rights Reserved
 //  * Unauthorized copying of this file, via any medium is strictly prohibited
 //  * Proprietary and confidential
-//  * Written by Igor Prokofjev <igor.prokofjev@pro-vision.com>, 2016
+//  * Written by Igor Prokofjev <igor.prokofjev@profitgroup-inc.com>, 2016
 //  */
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 
@@ -23,7 +24,7 @@ namespace MainSite.Core
 
         #endregion
 
-        #region Private members
+        #region Private members        
 
         private static readonly Dictionary<string, object> dictSettings;
 
@@ -75,19 +76,23 @@ namespace MainSite.Core
                 throw new ArgumentNullException("key");
             }
 
-            Lazy<T> lazy;
-            if (!dictSettings.ContainsKey(key))
+            lock (((IDictionary)dictSettings).SyncRoot)
             {
-                Func<T> func = () => ReadAppSetting<T>(key);
-                lazy = new Lazy<T>(func);
-                dictSettings.Add(key, lazy);
-            }
-            else
-            {
-                lazy = (Lazy<T>)dictSettings[key];
-            }
+                Lazy<T> lazy;
 
-            return lazy.Value;
+                if (!dictSettings.ContainsKey(key))
+                {
+                    Func<T> func = () => ReadAppSetting<T>(key);
+                    lazy = new Lazy<T>(func);
+                    dictSettings.Add(key, lazy);
+                }
+                else
+                {
+                    lazy = (Lazy<T>)dictSettings[key];
+                }
+
+                return lazy.Value;
+            }                        
         }
 
         private static T ReadAppSetting<T>(string key)
